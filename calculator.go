@@ -3,23 +3,26 @@ package main
 import "fmt"
 
 func add(a, b int) int {
-	//Insert code here
 
+	output := a + b
+	return output
 }
 
 func subtract(a, b int) int {
-	//Insert code here
+	output := a - b
+	return output
 
 }
 
 func multiply(a, b int) int {
-	//Insert code here
+	output := a * b
+	return output
 
 }
 
 func divide(a, b int) int {
-	//Insert code here
-	//consider for b = 0
+	output := a / b
+	return output
 
 }
 
@@ -33,5 +36,19 @@ func main() {
 	fmt.Println("Enter an integer: ")
 	fmt.Scanln(&b)
 
-	//Insert code here
+	if process == "add" {
+		res := add(a, b)
+		fmt.Println(res)
+	} else if process == "sub" {
+		res := subtract(a, b)
+		fmt.Println(res)
+	} else if process == "mul" {
+		res := multiply(a, b)
+		fmt.Println(res)
+	} else if process == "div" {
+		res := divide(a, b)
+		fmt.Println(res)
+	} else {
+		fmt.Println("Something went wrong, please check your input!")
+	}
 }
